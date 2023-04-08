@@ -229,7 +229,7 @@ input::-webkit-inner-spin-button {
 }
 
 .btn-reset {
-  bottom: 4.5rem;
+  bottom: 8rem;
   right: 12rem;
 }
 .btn-away {
@@ -255,7 +255,7 @@ input::-webkit-inner-spin-button {
     transform: translate(50%, -50%);
   }
   .btn-reset {
-    right: 7.5rem;
+    right: 12rem;
     transform: translate(0, -50%);
   }
   .divider {
@@ -264,10 +264,30 @@ input::-webkit-inner-spin-button {
   input[type="number"] {
     width: 90%;
   }
+  .btn-away {
+    transform: translateY(15rem);
+    opacity: 0;
+    pointer-events: none;
+  }
+  .btn-on {
+    transform: translateY(0rem);
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
 
 @media (max-width: 600px) {
   html {
     font-size: 35%;
+  }
+  .btn-away {
+    transform: translateY(15rem);
+    opacity: 0;
+    pointer-events: none;
+  }
+  .btn-on {
+    transform: translateY(0rem);
+    opacity: 1;
+    pointer-events: auto;
   }
 }
