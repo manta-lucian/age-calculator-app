@@ -105,11 +105,12 @@ main {
 .component {
   width: 100%;
   max-width: 80rem;
-  min-width: 37.5rem;
+  min-width: 60rem;
   background-color: var(--color-White);
   border-radius: 2.5rem;
   border-bottom-right-radius: 20rem;
   padding: 5rem;
+  position: relative;
 }
 
 input[type="number"] {
@@ -227,6 +228,21 @@ input::-webkit-inner-spin-button {
   border: 2px solid var(--color-Light-red) !important;
 }
 
+.btn-reset {
+  bottom: 4.5rem;
+  right: 12rem;
+}
+.btn-away {
+  transform: translateY(15rem);
+  opacity: 0;
+  pointer-events: none;
+}
+.btn-on {
+  transform: translateY(0rem);
+  opacity: 1;
+  pointer-events: auto;
+}
+
 @media (max-width: 700px) {
   html {
     font-size: 50%;
@@ -237,6 +253,10 @@ input::-webkit-inner-spin-button {
   .btn {
     right: 50%;
     transform: translate(50%, -50%);
+  }
+  .btn-reset {
+    right: 7.5rem;
+    transform: translate(0, -50%);
   }
   .divider {
     margin-top: 10rem;

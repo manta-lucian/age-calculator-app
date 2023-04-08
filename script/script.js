@@ -36,8 +36,9 @@ const ageNumberMonthTwo = document.querySelector(".age-number-month-2");
 const ageNumberDayOne = document.querySelector(".age-number-day-1");
 const ageNumberDayTwo = document.querySelector(".age-number-day-2");
 
-// BUTTON
+// BUTTONs
 const button = document.querySelector(".btn");
+const buttonReset = document.querySelector(".btn-reset");
 
 function calculateAge() {
   let day;
@@ -154,9 +155,11 @@ function calculateAge() {
     ageNumberYearOne.innerHTML = `${year}`;
     ageNumberMonthOne.innerHTML = `${month}`;
     ageNumberDayOne.innerHTML = `${day}`;
+    buttonReset.classList.add("btn-on");
   } else {
     [...ageNumbers].forEach((el) => el.classList.add("display-none"));
     [...lines].forEach((el) => el.classList.remove("display-none"));
+    buttonReset.classList.remove("btn-on");
     return;
   }
 
@@ -165,4 +168,13 @@ function calculateAge() {
 
 button.addEventListener("click", (e) => {
   calculateAge();
+});
+
+buttonReset.addEventListener("click", (e) => {
+  dayInput.value = "";
+  monthInput.value = "";
+  yearInput.value = "";
+  [...ageNumbers].forEach((el) => el.classList.add("display-none"));
+  [...lines].forEach((el) => el.classList.remove("display-none"));
+  buttonReset.classList.remove("btn-on");
 });
