@@ -90,8 +90,10 @@ function calculateAge() {
     arrayInput[2].classList.add("red-border");
     isDateValid = false;
   } else {
-    yearInputEmpty.classList.add("display-none");
+    yearInputDead.classList.add("display-none");
     yearInputValid.classList.add("display-none");
+    yearInputPast.classList.add("display-none");
+    yearInputEmpty.classList.add("display-none");
     [...labels][2].classList.remove("red");
     arrayInput[2].classList.remove("red-border");
   }
