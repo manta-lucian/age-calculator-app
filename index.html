@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="script/script.js" defer></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body>
+    <main>
+      <div class="component">
+        <h1 class="visually-hidden">Age calculator app</h1>
+        <div class="inputs">
+          <div class="input inputs__day">
+            <label class="label" for="day">day</label>
+            <input class="x" type="number" id="day" placeholder="DD" />
+            <p class="error error-day-valid display-none red">Must be a valid day</p>
+            <p class="error error-day-empty display-none red">This field is required</p>
+          </div>
+          <div class="input inputs__month">
+            <label class="label" for="month">month</label>
+            <input class="x" type="number" id="month" placeholder="MM" />
+            <p class="error error-month-valid display-none red">Must be a valid month</p>
+            <p class="error error-month-empty display-none red">This field is required</p>
+          </div>
+          <div class="input inputs__year">
+            <label class="label" for="year">year</label>
+            <input class="x" type="number" id="year" placeholder="YYYY" />
+            <p class="error error-year-valid display-none red">Must be a valid year</p>
+            <p class="error error-year-empty display-none red">This field is required</p>
+            <p class="error error-year-past display-none red">Must be in the past</p>
+            <p class="error error-year-dead display-none red">You are dead</p>
+          </div>
+        </div>
+        <div class="divider">
+          <button class="btn">
+            <span><img src="assets/images/icon-arrow.svg" alt="arrow down" /></span>
+          </button>
+        </div>
+        <div class="age">
+          <div class="age__display years">
+            <div class="display-age">
+              <div class="line line-year-1"></div>
+              <div class="line line-year-2"></div>
+              <p class="age-number age-number-year-1 display-none"></p>
+              <!-- <p class="age-number age-number-year-2 display-none">7</p> -->
+            </div>
+            <p class="age__text">years</p>
+          </div>
+          <div class="age__display months">
+            <div class="display-age">
+              <div class="line line-month-1"></div>
+              <div class="line line-month-2"></div>
+              <p class="age-number age-number-month-1 display-none"></p>
+              <!-- <p class="age-number age-number-month-2 display-none">7</p> -->
+            </div>
+            <p class="age__text">months</p>
+          </div>
+          <div class="age__display days">
+            <div class="display-age">
+              <div class="line line-day-1"></div>
+              <div class="line line-day-2"></div>
+              <p class="age-number age-number-day-1 display-none"></p>
+              <!-- <p class="age-number age-number-day-2 display-none">7</p> -->
+            </div>
+            <p class="age__text">days</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
