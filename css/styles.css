@@ -126,6 +126,12 @@ input[type="number"]:focus {
   border: 2px solid var(--color-Purple);
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .component label {
   transform: translateX(-5px);
   color: var(--color-Smokey-grey);
